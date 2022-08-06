@@ -1,6 +1,5 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import Test from '@/pages/test';
 
 Vue.use(Router);
 
@@ -8,7 +7,7 @@ const routes = [
   {
     path: '/test',
     name: 'Test',
-    component: Test,
+    component: () => import(/* webpackChunkName: "manage" */'@/pages/test'),
   },
 ];
 

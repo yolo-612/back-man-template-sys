@@ -1,0 +1,452 @@
+/* global vars */
+:root {
+  --color-brand-5: #E0252B;
+  --color-font-5: #333;
+  --color-font-title: rgba(0, 0, 0, 0.85);
+  --color-font-tips: rgba(0, 0, 0, 0.45);
+}
+
+:root {
+  --font-size-4: 12px;
+  --font-size-5: 14px;
+  --font-size-6: 16px;
+  --font-size-7: 18px;
+  --font-weight-4: 400;
+  --font-weight-5: 500;
+  --font-weight-7: 700;
+}
+
+/* ext sdesign var */
+:root{
+  --sdesign-color-brand-5: #E0252B;
+  --sdesign-height-4: 28px;
+  --sdesign-height-5: 32px;
+  --sdesign-height-6: 36px;
+  --sdesign-padding-1: 8px;
+  --sdesign-padding-2: 10px;
+  --sdesign-padding-3: 12px;
+  --sdesign-padding-4: 16px;
+  --sdesign-padding-5: 20px;
+  --sdesign-padding-7: 32px;
+
+  --color-gray-40: #616161;
+  --color-font-active: #141222;
+  --color-line: rgba(130, 131, 149, 0.1);
+  --radius-mini: 4px;
+  --radius-normal: 8px;
+}
+
+/* bg銆乻hadow */
+.theme-v2.vars-sf .global-content-5{
+  background: #FFFFFF;
+  box-shadow: 0px 4px 16px rgba(20, 18, 34, 0.03);
+}
+/* radius */
+.theme-v2.vars-sf .global-radius-5{
+  border-radius: var(--radius-normal);
+}
+.theme-v2.vars-sf .global-radius-no-tl{
+  border-top-left-radius: 0;
+}
+.theme-v2.vars-sf .global-radius-no-bl{
+  border-bottom-left-radius: 0;
+}
+.theme-v2.vars-sf .global-radius-no-br{
+  border-bottom-right-radius: 0;
+}
+/* font */
+.global-title-4{
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: rgba(20, 18, 34, 0.65);
+  user-select: none;
+}
+.global-title-4.active{
+  color: var(--color-font-active);
+  font-weight: 600;
+}
+.global-title-5{
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 16px;
+  user-select: none;
+  color: var(--color-gray-40);
+}
+.global-title-6{
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 16px;
+}
+/* app */
+.theme-v2.vars-sf .global-form-item-height{
+  height: 32px;
+}
+
+
+/* reset element ui */
+.theme-v2.vars-sf .TabNav{
+  border-bottom: none;
+}
+
+/* reset sdesign var value */
+:root{
+  --sdesign-font-size-large: 18px;
+  --sdesign-color-neutral-grey: #828395;
+}
+.theme-v2.vars-sf .ant-input{
+  border-color: #ececef;
+}
+.theme-v2.vars-sf .ant-input:focus{
+  border-color: var(--sdesign-color-brand-5);
+}
+
+
+/* reset antv 1.x */
+.theme-v2.vars-sf .ant-form-item-label,
+.theme-v2.vars-sf .ant-form-item-control{
+  line-height: 32px;
+}
+.ant-btn + .ant-btn{
+  margin-left: var(--sdesign-padding-1);
+}
+/* tags on calendar-selector */
+.ant-calendar-range-quick-selector .ant-tag{
+  color: var(--sdesign-color-brand-5);
+  background: var(--sdesign-color-brand-1);
+  border-color: var(--sdesign-color-brand-5);
+}
+/* form */
+.ant-form .ant-input{
+  color: #141222;
+}
+.ant-form .ant-form-item-label > label{
+  color: #828395;
+}
+
+/* anticon-down icon */
+.ant-cascader-picker .anticon-down svg,
+.ant-select-enabled .anticon-down svg,
+.ant-dropdown-trigger .anticon-down svg{
+  display: none;
+}
+.ant-cascader-picker .anticon-down,
+.ant-select-enabled .anticon-down,
+.ant-dropdown-trigger .anticon-down{
+  width: 10px;
+  height: 10px;
+}
+.ant-select-enabled .anticon-down,
+.ant-dropdown-trigger .anticon-down{
+  position: relative;
+}
+.ant-cascader-picker .anticon-down:after,
+.ant-select-enabled .anticon-down:after,
+.ant-dropdown-trigger .anticon-down:after{
+  content:"";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -5px;
+  margin-top: -2.5px;
+  width: 0;
+  height: 0;
+  border: 5px dashed transparent;
+  border-top: 5px solid currentColor;
+}
+.ant-cascader-picker:hover .anticon-down:after,
+.ant-select-enabled:hover .anticon-down:after,
+.ant-dropdown-trigger:hover .anticon-down:after{
+  border-top-color: #e8484b;
+}
+
+/* drawer */
+.ant-drawer .ant-drawer-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 12px 24px;
+  box-sizing: border-box;
+  z-index: 10;
+  border-top: 4px solid #DB2029;
+  border-radius: 0;
+}
+.ant-drawer .ant-drawer-close {
+  width: 46px;
+  height: 46px;
+  line-height: 46px;
+}
+.ant-drawer .ant-drawer-body{
+  overflow: initial !important; /* antdv榛樿鍐呰仈鏍峰紡overflow:scroll;閲嶈浠ラ伩鍏峸in涓嬪弻灞傜殑婊氬姩鏉″崰浣� */
+}
+
+/* calendar */
+.ant-calendar-picker .ant-calendar-picker-input{
+  padding-left: 4px;
+}
+.ant-calendar.ant-calendar-range{
+  width: 704px;
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+}
+.ant-calendar.ant-calendar-range .ant-calendar-input-wrap{
+  /* display: none; */
+}
+.ant-calendar.ant-calendar-range .ant-calendar-date-panel .ant-calendar-range-middle{
+  top: 10px;
+  bottom: 0;
+  background-color: var(--color-line);
+  padding: 0;
+  width: 1px;
+  height: auto;
+  overflow: hidden;
+}
+.ant-calendar.ant-calendar-range .ant-calendar-header,
+.ant-calendar.ant-calendar-range .ant-calendar-year-panel-header,
+.ant-calendar.ant-calendar-range .ant-calendar-month-panel-header,
+.ant-calendar.ant-calendar-range .ant-calendar-decade-panel-header{
+  position: relative;
+  line-height: 20px;
+  height: auto;
+  padding-top: 14px;
+  padding-bottom: 16px;
+}
+.ant-calendar.ant-calendar-range .ant-calendar-header a,
+.ant-calendar.ant-calendar-range .ant-calendar-year-panel-header a,
+.ant-calendar.ant-calendar-range .ant-calendar-month-panel-header a{
+  line-height: 20px;
+}
+.ant-calendar.ant-calendar-range .ant-calendar-year-panel-prev-decade-btn,
+.ant-calendar.ant-calendar-range .ant-calendar-year-panel-next-decade-btn,
+.ant-calendar.ant-calendar-range .ant-calendar-month-panel-prev-year-btn,
+.ant-calendar.ant-calendar-range .ant-calendar-month-panel-next-year-btn,
+.ant-calendar.ant-calendar-range .ant-calendar-decade-panel-prev-century-btn,
+.ant-calendar.ant-calendar-range .ant-calendar-decade-panel-next-century-btn{
+  top: 12px;
+  height: 20px;
+}
+.ant-calendar.ant-calendar-range.ant-calendar-time .ant-calendar-time-picker-inner{
+  padding-top:0;
+}
+
+.ant-calendar.ant-calendar-range .ant-calendar-header:after{
+  content:"";
+  position: absolute;
+  bottom: 0;
+  left: 16px;
+  right: 16px;
+  height: 1px;
+  background-color: var(--color-line);
+}
+.ant-calendar.ant-calendar-range .ant-calendar-column-header .ant-calendar-column-header-inner{
+  font-size: 12px;
+  user-select: none;
+  color: var(--sdesign-color-neutral-grey);
+}
+.ant-calendar.ant-calendar-range .ant-calendar-year-panel-header,
+.ant-calendar.ant-calendar-range .ant-calendar-year-panel-body,
+.ant-calendar.ant-calendar-range .ant-calendar-month-panel-header,
+.ant-calendar.ant-calendar-range .ant-calendar-month-panel-body,
+.ant-calendar.ant-calendar-range .ant-calendar-decade-panel-header,
+.ant-calendar.ant-calendar-range .ant-calendar-decade-panel-body{
+  background-color: #fff;
+}
+.ant-calendar.ant-calendar-range .ant-calendar-cell{
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+.ant-calendar.ant-calendar-range .ant-calendar-body{
+  border: none;
+}
+.ant-calendar.ant-calendar-range .ant-calendar-body td:nth-last-child(1):before{
+  right: 10px;
+  border-top-right-radius: var(--radius-mini);
+  border-bottom-right-radius: var(--radius-mini);
+}
+.ant-calendar.ant-calendar-range .ant-calendar-body td:nth-child(1):before{
+  left: 10px;
+  border-top-left-radius: var(--radius-mini);
+  border-bottom-left-radius: var(--radius-mini);
+}
+.ant-calendar.ant-calendar-range .ant-calendar-date{
+  border-radius: var(--radius-mini);
+  width: 26px;
+  height: 26px;
+  line-height: 24px;
+  user-select: none;
+}
+.ant-calendar .ant-calendar-today .ant-calendar-date{
+  color: var(--color-font-active);
+  font-weight: var(--sdesign-font-weight-bold);
+}
+.ant-calendar.ant-calendar-range .ant-calendar-selected-day .ant-calendar-date,
+.ant-calendar.ant-calendar-range .ant-calendar-in-range-cell .ant-calendar-date{
+  font-weight: var(--sdesign-font-weight-bold);
+}
+.ant-calendar.ant-calendar-range .ant-calendar-in-range-cell .ant-calendar-date{
+  color: var(--sdesign-color-brand-5);
+}
+.ant-calendar.ant-calendar-range .ant-calendar-disabled-cell .ant-calendar-date,
+.ant-calendar.ant-calendar-range .ant-calendar-disabled-cell:before{
+  background-color: transparent !important;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.25);
+}
+.ant-calendar.ant-calendar-range .ant-calendar-in-range-cell:before,
+.ant-calendar.ant-calendar-range .ant-calendar-selected-start-date:before,
+.ant-calendar.ant-calendar-range .ant-calendar-selected-end-date:before{
+  content: '';
+  position: absolute;
+  top: 3px;
+  bottom: 3px;
+  left: 0;
+  right: 0;
+  display: block;
+  background: #fff1f0;
+  border: 0;
+  border-radius: 0;
+}
+.ant-calendar.ant-calendar-range .ant-calendar-selected-end-date:before{
+  right: 10px;
+}
+.ant-calendar.ant-calendar-range .ant-calendar-selected-start-date:before{
+  left: 10px;
+}
+.ant-calendar.ant-calendar-range .ant-calendar-selected-day,
+.ant-calendar.ant-calendar-range .ant-calendar-selected-day .ant-calendar-date{
+  position: relative;
+}
+.ant-calendar.ant-calendar-range .ant-calendar-time-picker-btn{
+  color: #5462AE;
+}
+.ant-calendar .ant-calendar-footer .ant-calendar-ok-btn-disabled,
+.ant-calendar .ant-calendar-footer .ant-calendar-time-picker-btn-disabled{
+  cursor: not-allowed;
+}
+.ant-calendar .ant-calendar-footer .ant-calendar-ok-btn:not(.ant-calendar-ok-btn-disabled){
+  font-size: 13px;
+}
+.ant-calendar .ant-calendar-footer .ant-calendar-ok-btn:not(.ant-calendar-ok-btn-disabled){
+  background-color: transparent;
+  color: var(--sdesign-color-brand-5);
+}
+.ant-calendar .ant-calendar-footer{
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.ant-calendar.ant-calendar-range.ant-calendar-time .ant-calendar-time-picker-panel{
+  height: auto;
+  top:0;
+  bottom: 0;
+  margin: 0;
+}
+.ant-calendar-time .ant-calendar-time-picker {
+  top: 83px !important;
+  bottom: 0;
+  height: auto !important;
+}
+/* drawer's zIndex changed because ActivityFloatWindow's zIndex is 20000 */
+.mail-drawer.ant-drawer{
+  /* z-index: 30000; */
+}
+
+
+/* global class */
+
+/* layout */
+.item-inline-2{
+  display: flex;
+}
+.item-inline-2 .ant-form-item-label,
+.item-inline-2 .ant-form-item-control{
+  line-height: 32px;
+}
+.item-inline-2 .ant-form-item{
+  flex: 1;
+  display: flex;
+}
+.item-inline-2 .ant-form-item .ant-form-item-label{
+  width: 82px;
+}
+.item-inline-2 .ant-form-item .ant-form-item-control-wrapper {
+  flex: 1;
+}
+.item-inline-2 .ant-form-item:first-child {
+  margin-right: 64px;
+}
+
+
+/* upload-drag */
+.global-upload-dragger .ant-upload.ant-upload-drag {
+  background-color: #fff;
+}
+
+/* button */
+.global-button{
+  --border-color: #d9d9d9;
+  display: flex;
+  line-height: var(--sdesign-height-5);
+  padding: 0 var(--sdesign-padding-5);
+  border: none;
+  margin: 0;
+  background-color: transparent;
+  font-size: var(--sdesign-font-size-regular);
+  color: var(--sdesign-font-color-text);
+  border-radius: var(--sdesign-radius-medium);
+  box-shadow: inset 0 0 0 1px var(--border-color);
+  cursor: pointer;
+  user-select: none;
+}
+.global-button[data-size="large"] {
+  line-height: var(--sdesign-height-6);
+  padding: 0 var(--sdesign-padding-7);
+}
+.global-button[data-size="small"] {
+  line-height: var(--sdesign-height-4);
+}
+.global-button[data-type="primary"] {
+  color: var(--sdesign-color-neutral-white-7);
+  background-color: var(--sdesign-color-brand-5);
+  box-shadow: none;
+}
+.global-button[data-type="primary"]:not(:disabled):hover,
+.global-button[data-type="primary"]:not(:disabled):focus {
+  color: var(--sdesign-color-white);
+  background: var(--sdesign-color-brand-4);
+}
+.global-button:disabled {
+  color: rgba(0, 0, 0, 0.25);
+  background-color: var(--sdesign-color-disable-fill);
+  cursor: not-allowed;
+}
+.global-button + .global-button{
+  margin-left: var(--sdesign-padding-1);
+}
+
+/* mmodal */
+.global-modal .ant-modal-content{
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  overflow: hidden;
+}
+.global-modal .ant-modal-close-x{
+  width: 46px;
+  height: 46px;
+}
+.global-modal .ant-modal-content::before{
+  display: block;
+  content: '';
+  padding: 0 50px 0 20px;
+  height: 46px;
+  line-height: 46px;
+  font-size: 18px;
+  color: #222;
+  font-weight: 600;
+  overflow: hidden;
+  box-shadow: inset 0 4px 0 #DC1E32, 0px 1px 0px 0px #00000019;
+}

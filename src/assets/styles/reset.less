@@ -1,0 +1,81 @@
+@font-family: 'pingfang SC', 'Helvetica Neue', 'Helvetica' ,'Microsoft YaHei';
+@gray: #ccc;
+@black: #000;
+@font: #fff;
+@font-face {
+  font-family: Oswald-Regular;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  // min-width: 1240px;
+  margin: 0 auto;
+  font: 12px/1.5 @font-family;
+  background: #F2F2F2;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #2c3e50;
+}
+
+header, footer, section, aside, figure, nav, canvas, figure, label {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+ul, li, dl, dt, dd, p {
+  &:extend(header);
+  list-style-type: none;
+}
+
+h1, h2, h3, h4 {
+  &:extend(header);
+}
+
+*[placeholder]:empty:before,
+*[contenteditable = 'true'] &:empty:before {
+  content: attr(placeholder);
+  color: @gray;
+}
+
+img {
+  &:extend(header);
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+i {
+  font-style: normal;
+}
+
+a {
+  text-decoration: none;
+  color: @black;
+  //font-size: 30px;
+
+  &:focus {
+    outline: thin dotted @black;
+    outline: 0 auto -webkit-focus-ring-color;
+    outline-offset: -2rem;
+  }
+
+  &:hover, &:active {
+    outline: 0;
+    color: @black;
+  }
+
+  &:visited {
+    color: @black;
+  }
+}
+
+// input的type为number时不显示右边的加减按钮
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none !important;
+  margin: 0;
+}
+
+
+

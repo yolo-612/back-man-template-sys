@@ -3,7 +3,7 @@
  * @Date: 2022-08-03 20:15:48
  * @Email: 2458097476@qq.com
  * @LastEditors: yolo
- * @LastEditTime: 2022-08-03 21:13:07
+ * @LastEditTime: 2022-08-04 00:05:41
  * @Description: file information
  */
 // https://eslint.org/docs/user-guide/configuring
@@ -56,5 +56,11 @@ module.exports = {
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
     // 回车换行符兼容window
     'linebreak-style':[0,'error','window'],
+    // 禁止log语句
+    'no-console': 'off',
+    // 禁止绝对引入必须要在相对引入之前
+    'import/first': [ 'error', 'DISABLE-absolute-first' ],
+    // 禁止未使用的表达式
+    'no-unused-expressions': 'off',
   }
 }

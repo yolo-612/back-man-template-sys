@@ -1,3 +1,11 @@
+/*
+ * @Author: yolo
+ * @Date: 2022-08-03 20:15:48
+ * @Email: 2458097476@qq.com
+ * @LastEditors: yolo
+ * @LastEditTime: 2022-08-03 23:16:52
+ * @Description: file information
+ */
 'use strict'
 const path = require('path')
 const utils = require('./utils')
@@ -74,7 +82,11 @@ module.exports = {
           limit: 10000,
           name: utils.assetsPath('fonts/[name].[hash:7].[ext]')
         }
-      }
+      },
+      {
+        test: /\.less$/,
+        loader: "style-loader!css-loader!less-loader"
+    }
     ]
   },
   node: {

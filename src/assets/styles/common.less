@@ -1,0 +1,244 @@
+@font-family: 'Helvetica Neue' 'Helvetica' 'Microsoft YaHei';
+@gray: #ccc;
+@black: #000;
+@font: #fff;
+@color222: #222;
+
+.app-with {
+	width: 100%;
+	max-width: 1980px;
+	min-width: 320px;
+	margin: 0 auto;
+}
+
+.fixed-100 {
+	position: fixed;
+	&:extend(.app-with);
+	top: 0;
+	bottom: 0;
+}
+
+.nowrap {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.ellipsis-line-1 {
+	display: -webkit-box;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	word-wrap: break-word;
+	-webkit-line-clamp: 1;
+	-webkit-box-orient: vertical;
+}
+
+.ellipsis-line-2 {
+	display: -webkit-box;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	word-wrap: break-word;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+}
+
+.d-flex {
+	display: flex;
+}
+
+.flex-1 {
+	flex: 1;
+}
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+.init-input {
+	border: none;
+	font-size: 0.26rem;
+	color: @font;
+
+	&::-webkit-input-placeholder {
+		color: #999;
+		font-size: 0.26rem;
+	}
+}
+
+.center-middle {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: scale(1, 1) translate(-50%, -50%);
+}
+
+.hand {
+	cursor: pointer;
+}
+
+
+.yuan::before {
+	content: '¥';
+}
+
+.page-layer {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+
+	&.position {
+		position: absolute;
+	}
+
+	@media screen and (min-width: 750px) {
+		position: absolute;
+	}
+
+	.bg {
+		position: absolute;
+		width: 100%;
+		height: 500%;
+		top: -400%;
+		left: 0;
+		background: rgba(255, 255, 255, 0.4);
+		@media screen and (min-width: 750px) {
+			top: -9900%;
+			height: 10000%;
+		}
+	}
+
+	.content {
+		box-shadow: 0 -0.1rem 0.2rem 1px rgba(0, 0, 0, 0.1);
+
+		.close {
+			position: absolute;
+			top: 0.3rem;
+			right: 0.2rem;
+			ico-close: 0.4rem @black;
+		}
+	}
+}
+
+// .slide-up-enter-active {
+// 	animation: slide-up 0.4s 0s ease-in-out forwards;
+
+// 	&.delay {
+// 		animation-delay: 0.4s;
+// 	}
+// }
+
+// .slide-up-leave-active {
+// 	animation: slide-up 0.3s 0s reverse;
+// }
+
+// @-webkit-keyframes slide-up {
+// 	from {
+// 		-webkit-transform: translateY(100%);
+// 		-moz-transform: translateY(100%);
+// 		transform: translateY(100%);
+// 		opacity: 0;
+// 	}
+// 	to {
+// 		-webkit-transform: translateY(0);
+// 		-moz-transform: translateY(0);
+// 		transform: translateY(0);
+// 		opacity: 1;
+// 	}
+// }
+
+// @-moz-keyframes slide-up {
+// 	from {
+// 		-webkit-transform: translateY(100%);
+// 		-moz-transform: translateY(100%);
+// 		transform: translateY(100%);
+// 		opacity: 0;
+// 	}
+// 	to {
+// 		-webkit-transform: translateY(0);
+// 		-moz-transform: translateY(0);
+// 		transform: translateY(0);
+// 		opacity: 1;
+// 	}
+// }
+
+// @-ms-keyframes slide-up {
+// 	from {
+// 		-webkit-transform: translateY(100%);
+// 		-moz-transform: translateY(100%);
+// 		transform: translateY(100%);
+// 		opacity: 0;
+// 	}
+// 	to {
+// 		-webkit-transform: translateY(0);
+// 		-moz-transform: translateY(0);
+// 		transform: translateY(0);
+// 		opacity: 1;
+// 	}
+// }
+
+// @-o-keyframes slide-up {
+// 	from {
+// 		-webkit-transform: translateY(100%);
+// 		-moz-transform: translateY(100%);
+// 		transform: translateY(100%);
+// 		opacity: 0;
+// 	}
+// 	to {
+// 		-webkit-transform: translateY(0);
+// 		-moz-transform: translateY(0);
+// 		transform: translateY(0);
+// 		opacity: 1;
+// 	}
+// }
+
+// @keyframes slide-up {
+// 	from {
+// 		-webkit-transform: translateY(100%);
+// 		-moz-transform: translateY(100%);
+// 		transform: translateY(100%);
+// 		opacity: 0;
+// 	}
+// 	to {
+// 		-webkit-transform: translateY(0);
+// 		-moz-transform: translateY(0);
+// 		transform: translateY(0);
+// 		opacity: 1;
+// 	}
+// }
+
+.wrap1200 {
+	position: relative;
+	width: 1240px;
+	margin: 0 auto;
+	padding: 0px 20px;
+	box-sizing: border-box;
+}
+
+.wh100 {
+	width: 100%;
+	height: 100%;
+}
+
+/*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸,注意仅在chrome下有效*/
+.scrollbar {
+	&::-webkit-scrollbar {
+		width: 6px;
+		height: 6px;
+		/* background-color: #fff; */
+	}
+
+	&::-webkit-scrollbar-track {
+		-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+		border-radius: 3px;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		border-radius: 3px;
+		-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .1);
+		background-color: #ddd;
+	}
+}
