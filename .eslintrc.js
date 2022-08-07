@@ -62,5 +62,17 @@ module.exports = {
     'import/first': [ 'error', 'DISABLE-absolute-first' ],
     // 禁止未使用的表达式
     'no-unused-expressions': 'off',
+    // 禁止下划线开头的变量声明
+    "no-underscore-dangle": 'off',
+    // 禁止未声明的调用
+    "no-use-before-define": 'off',
+    // 严格等于
+    "eqeqeq": 'off',
+    // 禁止无return的函数
+    "no-return-assign": 'off',
+    // 禁止对形参重赋值
+    "no-param-reassign": 'off',
+    // 禁止匿名函数
+    "func-names": 'off'
   }
 }

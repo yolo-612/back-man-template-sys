@@ -12,5 +12,8 @@ const prodEnv = require('./prod.env')
 
 module.exports = merge(prodEnv, {
   NODE_ENV: '"development"',
-  VUE_APP_ROUTER_BASE: '"manage"'
+  // vue-router的base
+  VUE_APP_ROUTER_BASE: '"manage"',
+  // api代理的接口域名
+  VUE_APP_BASE_URL: '"http://v.sit.sf-express.com/"'
 })

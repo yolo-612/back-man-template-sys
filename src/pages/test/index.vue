@@ -10,18 +10,53 @@
   <div class="test-box">
     <span>1111</span>
     <span class="span-2">222</span>
-    <a-button type="primary">Primary Button</a-button>
+    <a-button type="primary" @click="handleClick">Primary Button</a-button>
   </div>
 </template>
 
 <script>
+import { getDistrctVersion } from '@/api/Test';
+import { HttpError } from '@/utils/http';
+
 export default {
   name: 'Test',
-  created() {
-  },
+  created() {},
   methods: {
-    haha() {
-      console.log(112312312);
+    // async版本1：
+    async handleClick() {
+      const params = { version: '1641146467' };
+      try {
+        const { obj = {} } = await getDistrctVersion(params);
+        // 响应处理
+        console.log(obj);
+      } catch (error) {
+        if (HttpError.isApiType(error)) {
+          // Toast(HttpError.getMsg(error));
+          console.log(HttpError.getMsg(error));
+        } else {
+          // Toast('网络异常，请稍后再试');
+          console.log('网络异常，请稍后再试');
+        }
+      }
+    },
+    // promise版本2
+    handleClick1() {
+      const params = { version: '1641146467' };
+      getDistrctVersion(params)
+        .then((res) => {
+          const { obj = {} } = res;
+          // 响应处理
+          console.log(obj);
+        })
+        .catch((error) => {
+          if (HttpError.isApiType(error)) {
+          // Toast(HttpError.getMsg(error));
+            console.log(HttpError.getMsg(error));
+          } else {
+          // Toast('网络异常，请稍后再试');
+            console.log('网络异常，请稍后再试');
+          }
+        });
     },
   },
 };
