@@ -8,6 +8,7 @@
  */
 import Vue from 'vue';
 import {
+  Layout,
   Modal,
   Button,
   FormModel,
@@ -38,6 +39,7 @@ import {
 // import '../assets/styles/reset.less'; // 写在这里可以覆盖ant的全局样式影响
 // import '../assets/styles/ant-vue.less';
 
+Vue.use(Layout);
 Vue.use(Modal);
 Vue.use(Button);
 Vue.use(FormModel);

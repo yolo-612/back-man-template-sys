@@ -14,8 +14,11 @@ import router from './router';
 import store from './store';
 import '@/assets/styles/global.css';
 import 'ant-design-vue/dist/antd.css';
+import $bus from './utils/bus';
 
 Vue.config.productionTip = false;
+
+Vue.prototype.$bus = $bus;
 
 // 加载插件，插件统一都都写在plugin文件夹下
 const pluginsFiles = require.context('./plugins', false, /\.js$/);

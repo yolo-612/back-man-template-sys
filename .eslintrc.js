@@ -73,6 +73,10 @@ module.exports = {
     // 禁止对形参重赋值
     "no-param-reassign": 'off',
     // 禁止匿名函数
-    "func-names": 'off'
+    "func-names": 'off',
+    'no-loop-func': 'off',
+    // 不允许使用自加自减
+    'no-plusplus': 'off',
+    'no-shadow': 'off',
   }
 }
