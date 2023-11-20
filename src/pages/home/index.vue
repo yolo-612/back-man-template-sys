@@ -10,6 +10,8 @@
 <script>
 import Modal1 from '../../components/dialogManage/dialog1';
 import Modal2 from '../../components/dialogManage/dialog2';
+import dialogTest1 from '../../components/dialogManage/dialogTest1';
+import dialogTest2 from '../../components/dialogManage/dialogTest2';
 
 
 export default {
@@ -18,6 +20,7 @@ export default {
     return {
       ticket: '',
       showDialog: [true, true],
+      taskDialog: [dialogTest2, dialogTest1],
     };
   },
   components: {
@@ -31,11 +34,15 @@ export default {
   },
   mounted() {
     let promise = Promise.resolve();
-    this.showDialog.forEach((bool, index) => {
-      if (bool) {
-        promise = promise.then(() => this.showDialogFunc(index + 1));
-      }
+    this.taskDialog.forEach((item) => {
+      promise = promise.then(() => item.show());
     });
+    // 简单demo
+    // this.showDialog.forEach((bool, index) => {
+    //   if (bool) {
+    //     promise = promise.then(() => this.showDialogFunc(index + 1));
+    //   }
+    // });
   },
 };
 </script>
