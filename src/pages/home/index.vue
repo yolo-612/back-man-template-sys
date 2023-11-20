@@ -2,16 +2,13 @@
   <div class="main-box">
     <a-row class="login-text">hello_首页</a-row>
     <a-spin size="large" />
-    <Modal1 ref="modal1"/>
-    <Modal2 ref="modal2"/>
+
   </div>
 </template>
 
 <script>
-import Modal1 from '../../components/dialogManage/dialog1';
-import Modal2 from '../../components/dialogManage/dialog2';
-import dialogTest1 from '../../components/dialogManage/dialogTest1';
-import dialogTest2 from '../../components/dialogManage/dialogTest2';
+/* eslint-disable */
+const loadDialogManager = import('../../components/dialogManage/DialogManager.js').then(module => module.default);
 
 
 export default {
@@ -20,12 +17,10 @@ export default {
     return {
       ticket: '',
       showDialog: [true, true],
-      taskDialog: [dialogTest2, dialogTest1],
     };
   },
   components: {
-    Modal1,
-    Modal2,
+
   },
   methods: {
     showDialogFunc(index) {
@@ -33,16 +28,9 @@ export default {
     },
   },
   mounted() {
-    let promise = Promise.resolve();
-    this.taskDialog.forEach((item) => {
-      promise = promise.then(() => item.show());
+    loadDialogManager.then((DialogManager) => {
+      DialogManager.getInstance().startTask(true);
     });
-    // 简单demo
-    // this.showDialog.forEach((bool, index) => {
-    //   if (bool) {
-    //     promise = promise.then(() => this.showDialogFunc(index + 1));
-    //   }
-    // });
   },
 };
 </script>
